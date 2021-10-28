@@ -1,0 +1,41 @@
+<mat-grid-list cols="1" *ngIf="!juego; else divJuego">
+    <mat-grid-tile>
+        <mat-spinner></mat-spinner>
+    </mat-grid-tile>
+</mat-grid-list>
+
+
+<ng-template #divJuego>
+    
+    <div fxLayout="row"
+         fxLayout.xs="column"
+         fxLayoutGap="30px">
+
+         <div fxFlex="50">
+             <h1>{{ juego.titulo }} <small>- {{ juego.anio_salida }} </small> </h1>
+             <mat-divider></mat-divider>
+             <br>
+             <img [src]="juego | imagen">
+         </div>
+
+         <div fxFlex="50">
+             <h1>{{ juego.publisher }}</h1>
+             <mat-divider></mat-divider>
+
+             <mat-list>
+                 <mat-list-item> {{ juego.consola_main }} </mat-list-item>
+                 <mat-list-item> {{ juego.character_main }} </mat-list-item>
+                 <mat-list-item> {{ juego.publisher }} </mat-list-item>
+             </mat-list>
+
+             <br>
+             <button mat-button
+                     color="warn"
+                     (click)="regresar()">
+                 Regresar
+             </button>
+         </div>
+
+    </div>
+</ng-template>
+

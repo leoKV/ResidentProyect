@@ -1,0 +1,93 @@
+<h1>
+    {{ ( juego.id )? 'Editar' : 'Nuevo' }}
+    Juego
+    <small>{{ juego.titulo }}</small> 
+</h1>
+
+<div fxLayout="row"
+     fxLayoutGap="40px"
+     fxLayout.xs="column">
+
+    <div fxFlex="50" fxLayout="column">
+        
+        <div fxLayout="row" 
+             fxLayout.xs="column" 
+             fxLayoutGap="20px">
+            <mat-form-field fxFlex="100" fxLayout.xs="column" >
+                <mat-label>Titulo</mat-label>
+                <input matInput
+                       type="text"
+                       [(ngModel)]="juego.titulo"
+                       required>
+            </mat-form-field>
+    
+            <mat-form-field fxFlex="100">
+                <mat-label>Año de Salida</mat-label>
+                <input matInput
+                       type="text"
+                       [(ngModel)]="juego.anio_salida"
+                       required>
+            </mat-form-field>
+        </div>
+
+
+        <mat-form-field>
+            <mat-label>Consola Principal</mat-label>
+            <input matInput
+                   type="text"
+                   [(ngModel)]="juego.consola_main"
+                   required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Personaje Principal</mat-label>
+            <input matInput
+                   type="text"
+                   [(ngModel)]="juego.character_main"
+                   required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Empresa Creadora</mat-label>
+            <input matInput
+                   type="text"
+                   [(ngModel)]="juego.publisher"
+                   required>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Foto Url</mat-label>
+            <input matInput
+                   type="url"
+                   [(ngModel)]="juego.alt_img"
+                   required>
+        </mat-form-field>
+
+        <br>
+
+        <div fxLayout>
+            <button mat-raised-button 
+                    color="primary"
+                    (click)="guardar()">
+                <mat-icon>save</mat-icon>
+                {{ ( juego.id )? 'Actualizar' : 'Crear' }}
+            </button>
+        
+            <span class="spacer"></span>
+
+            <button *ngIf="juego.id"
+                    mat-raised-button
+                    (click)="borrarJuego()"
+                    color="warn">
+                <mat-icon>remove</mat-icon>
+                Borrar
+            </button>
+        </div>
+
+
+    </div>
+
+    <div fxFlex="50">
+        <img [src]="juego | imagen">
+    </div>
+</div>
