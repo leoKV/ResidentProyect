@@ -12,6 +12,7 @@ import { MaterialModule } from '../material/material.module';
 import { FormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { JuegosRoutingModule } from './juegos-routing.module';
+import { SoundsPipe } from './pipes/sounds.pipe';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { JuegosRoutingModule } from './juegos-routing.module';
     BuscarComponent,
     JuegoComponent,
     HomeComponent,
-    ListadoComponent
+    ListadoComponent,
+    SoundsPipe
   ],
   imports: [
     CommonModule,

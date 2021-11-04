@@ -30,6 +30,14 @@
             </mat-form-field>
         </div>
 
+        <mat-form-field>
+            <mat-label>Director</mat-label>
+            <input matInput
+                   type="text"
+                   [(ngModel)]="juego.director"
+                   required>
+        </mat-form-field>
+
 
         <mat-form-field>
             <mat-label>Consola Principal</mat-label>
@@ -49,10 +57,11 @@
 
         <mat-form-field>
             <mat-label>Empresa Creadora</mat-label>
-            <input matInput
-                   type="text"
-                   [(ngModel)]="juego.publisher"
-                   required>
+                <mat-select [(ngModel)]="juego.publisher" required>
+                    <mat-option  [value]="juego.publisher">
+                        {{juego.publisher}}
+                    </mat-option>
+                </mat-select>
         </mat-form-field>
 
         <mat-form-field>
@@ -61,6 +70,11 @@
                    type="url"
                    [(ngModel)]="juego.alt_img"
                    required>
+        </mat-form-field>
+                
+        <mat-form-field>
+            <mat-label>Sinopsis</mat-label>
+            <textarea matInput type="textarea" [(ngModel)]="juego.sinopsis"></textarea>
         </mat-form-field>
 
         <br>

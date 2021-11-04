@@ -6,26 +6,19 @@
 
     <img mat-card-image [src]="juego | imagen">
 
-    <mat-card-content>
-        <h3>{{ juego.publisher }}</h3>
-        <p>
-            <strong>Consola Principal de Salida</strong> {{ juego.consola_main }}
-            <br>
-            <strong> Protagonista: </strong> {{ juego.character_main }}
-        </p>
-    </mat-card-content>
-
     <mat-card-actions>
         <button mat-button 
-                color="warn"
+                color="accent"
                 [routerLink]="['/juegos', juego.id ]">
-            Leer más...
+            Más Info...
+        <mat-icon>info</mat-icon>
         </button>
 
         <button mat-button 
-                color="info"
+                color="basic"
                 [routerLink]="['/juegos/editar', juego.id ]">
             Editar
+            <mat-icon>edit</mat-icon>
         </button>
     </mat-card-actions>
 

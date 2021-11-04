@@ -12,7 +12,7 @@
          fxLayoutGap="30px">
 
          <div fxFlex="50">
-             <h1>{{ juego.titulo }} <small>- {{ juego.anio_salida }} </small> </h1>
+             <h1>{{ juego.titulo }} <small>----Año de Salida: {{ juego.anio_salida }} </small> </h1>
              <mat-divider></mat-divider>
              <br>
              <img [src]="juego | imagen">
@@ -23,16 +23,22 @@
              <mat-divider></mat-divider>
 
              <mat-list>
-                 <mat-list-item> {{ juego.consola_main }} </mat-list-item>
-                 <mat-list-item> {{ juego.character_main }} </mat-list-item>
-                 <mat-list-item> {{ juego.publisher }} </mat-list-item>
+                 <mat-list-item>Director: {{juego.director}}</mat-list-item>
+                 <mat-list-item>Consola Principal:  {{ juego.consola_main }} </mat-list-item>
+                 <mat-list-item>Protagonista: {{ juego.character_main }} </mat-list-item>
+                 <mat-list-item>Sinopsis: </mat-list-item>
+                 <br>
+                 <mat-list-item>{{juego.sinopsis}}</mat-list-item>
+                 <mat-list-item> <audio mat-card-image [src]="juego | sounds" autoplay loop ></audio></mat-list-item>
              </mat-list>
 
              <br>
              <button mat-button
                      color="warn"
                      (click)="regresar()">
+                     
                  Regresar
+                 <mat-icon>loop</mat-icon>
              </button>
          </div>
 

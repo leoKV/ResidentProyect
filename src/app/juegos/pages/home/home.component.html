@@ -40,16 +40,22 @@
 
     <mat-toolbar>
         <button mat-icon-button
+            color="accent"
                 (click)="sidenav.toggle()">
             <mat-icon>menu</mat-icon>
         </button>
 
-        <span class="spacer"></span>
-        <span>{{ auth.usuario }} </span>
+        <span class="spacer" ></span>
+        <span >
+            <mat-icon>account_circle</mat-icon>
+            {{ auth.usuario }}  
+        </span>
 
-        <button mat-button
+        <button mat-button 
+            color="primary"
                 (click)="logout()">
             Logout
+            <mat-icon>logout</mat-icon>
         </button>
     </mat-toolbar>
 

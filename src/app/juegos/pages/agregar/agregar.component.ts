@@ -22,11 +22,14 @@ export class AgregarComponent implements OnInit {
 
   juego: Juego={
     titulo: '',
+    director:'',
     publisher: '',
     consola_main: '',
     anio_salida: 0,
     character_main: '',
-    alt_img: ''
+    alt_img: '',
+    sinopsis:'',
+    sound:''
   }
   constructor( private juegosService: JuegosService,
     private activatedRoute: ActivatedRoute,
