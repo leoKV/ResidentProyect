@@ -1,0 +1,17 @@
+<h1>Listado de Peliculas</h1>
+<mat-divider></mat-divider>
+<br>
+
+<div fxLayout="row wrap"
+     fxLayout.xs="column"
+     fxLayoutAlign="center"
+     fxLayoutGap="20px">
+
+    <div fxFlex="20"
+         fxFlex.lg="15"
+         fxFlex.sm="30"
+         *ngFor="let pelicula of pelicula">
+       
+        <app-pelicula-tarjeta [pelicula]="pelicula"></app-pelicula-tarjeta>
+    </div>
+</div>

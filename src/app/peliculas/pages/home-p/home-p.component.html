@@ -1,0 +1,110 @@
+<mat-sidenav-container fullscreen>
+    
+    <mat-sidenav #sidenav mode="push">
+        
+        <mat-toolbar color="primary">
+            <span>Menú</span>
+            <span class="spacer"></span>
+            <button mat-icon-button
+                    (click)="sidenav.toggle()">
+                <mat-icon>menu</mat-icon>
+            </button>
+            
+        </mat-toolbar>
+
+        <mat-nav-list>
+            <a routerLink="./listado"
+               mat-list-item
+               (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon color='accent'>games</mat-icon>
+                <span >Listado de Juegos</span>
+            </a>
+
+            <a routerLink="./agregar"
+               mat-list-item
+               (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon color='warn'>add</mat-icon>
+                <span>Añadir Juego</span>
+            </a>
+
+            <a routerLink="./buscar"
+               mat-list-item
+               (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon color='warn'>search</mat-icon>
+                <span>Búscar Juego</span>
+            </a>
+
+            <a routerLink="./listado-p"
+               mat-list-item
+               (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon color='accent'>theaters</mat-icon>
+                <span >Listado de Peliculas</span>
+            </a>
+
+            <a routerLink="./agregar-p"
+               mat-list-item
+               (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon color='warn'>add</mat-icon>
+                <span>Añadir Pelicula</span>
+            </a>
+
+            <a routerLink="./buscar-p"
+               mat-list-item
+               (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon color='warn'>search</mat-icon>
+                <span>Búscar Pelicula</span>
+            </a>        
+        
+         <a routerLink="#"
+         mat-list-item
+         (click)="sidenav.toggle()">
+          <mat-icon mat-list-icon color='accent'>place</mat-icon>
+          <span>Maps</span>
+      </a>
+
+      <a routerLink="#"
+      mat-list-item
+      (click)="sidenav.toggle()">
+       <mat-icon mat-list-icon color='accent'>supervisor_account</mat-icon>
+       <span>Redes Sociales</span>
+   </a>
+
+
+
+
+
+
+
+        </mat-nav-list>
+        
+    </mat-sidenav>
+
+    <mat-toolbar>
+        <button mat-icon-button
+            color="accent"
+                (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+
+        <span class="spacer" ></span>
+        <span >
+            <mat-icon>account_circle</mat-icon>
+            {{ auth.usuario }}  
+        </span>
+
+        <button mat-button 
+            color="primary"
+                (click)="logout()">
+            Logout
+            <mat-icon>logout</mat-icon>
+        </button>
+    </mat-toolbar>
+
+
+    <div class="container">
+        <router-outlet></router-outlet>
+    </div>
+
+</mat-sidenav-container>
+
+

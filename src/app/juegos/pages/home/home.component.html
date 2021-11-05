@@ -16,24 +16,66 @@
             <a routerLink="./listado"
                mat-list-item
                (click)="sidenav.toggle()">
-                <mat-icon mat-list-icon>label</mat-icon>
-                <span>Listado de Juegos</span>
+                <mat-icon mat-list-icon color='accent'>games</mat-icon>
+                <span >Listado de Juegos</span>
             </a>
 
             <a routerLink="./agregar"
                mat-list-item
                (click)="sidenav.toggle()">
-                <mat-icon mat-list-icon>add</mat-icon>
+                <mat-icon mat-list-icon color='warn'>add</mat-icon>
                 <span>Añadir Juego</span>
             </a>
 
             <a routerLink="./buscar"
                mat-list-item
                (click)="sidenav.toggle()">
-                <mat-icon mat-list-icon>search</mat-icon>
+                <mat-icon mat-list-icon color='warn'>search</mat-icon>
                 <span>Búscar Juego</span>
             </a>
-            
+
+            <a routerLink="./listado-p"
+               mat-list-item
+               (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon color='accent'>theaters</mat-icon>
+                <span >Listado de Peliculas</span>
+            </a>
+
+            <a routerLink="./agregar-p"
+               mat-list-item
+               (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon color='warn'>add</mat-icon>
+                <span>Añadir Pelicula</span>
+            </a>
+
+            <a routerLink="./buscar-p"
+               mat-list-item
+               (click)="sidenav.toggle()">
+                <mat-icon mat-list-icon color='warn'>search</mat-icon>
+                <span>Búscar Pelicula</span>
+            </a>
+ 
+
+         <a routerLink="#"
+         mat-list-item
+         (click)="sidenav.toggle()">
+          <mat-icon mat-list-icon color='accent'>place</mat-icon>
+          <span>Maps</span>
+      </a>
+
+      <a routerLink="#"
+      mat-list-item
+      (click)="sidenav.toggle()">
+       <mat-icon mat-list-icon color='accent'>supervisor_account</mat-icon>
+       <span>Redes Sociales</span>
+   </a>
+
+
+
+
+
+
+
         </mat-nav-list>
         
     </mat-sidenav>

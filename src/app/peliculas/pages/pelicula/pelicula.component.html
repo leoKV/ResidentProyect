@@ -1,0 +1,47 @@
+<mat-grid-list cols="1" *ngIf="!pelicula; else divPelicula">
+    <mat-grid-tile>
+        <mat-spinner></mat-spinner>
+    </mat-grid-tile>
+</mat-grid-list>
+
+
+<ng-template #divPelicula>
+    
+    <div fxLayout="row"
+         fxLayout.xs="column"
+         fxLayoutGap="30px">
+
+         <div fxFlex="50">
+             <h1>{{ pelicula.titulo }} <small>----Año de Salida: {{ pelicula.anio_salida }} </small> </h1>
+             <mat-divider></mat-divider>
+             <br>
+             <img [src]="pelicula | imagen">
+         </div>
+
+         <div fxFlex="50">
+             <h1>{{ pelicula.productora }}</h1>
+             <mat-divider></mat-divider>
+
+             <mat-list>
+                 <mat-list-item>Director: {{pelicula.director}}</mat-list-item>
+                 <mat-list-item>Protagonista: {{ pelicula.character_main }} </mat-list-item>
+                 <mat-list-item>Sinopsis: </mat-list-item>
+                 <br>
+                 <mat-list-item>{{pelicula.sinopsis}}</mat-list-item>
+                 <mat-list-item> <audio mat-card-image [src]="pelicula | sounds" autoplay loop ></audio></mat-list-item>
+             </mat-list>
+
+             <br>
+             <button mat-button
+                     color="warn"
+                     (click)="regresar()">
+                     
+                 Regresar
+                 <mat-icon>loop</mat-icon>
+             </button>
+         </div>
+
+    </div>
+</ng-template>
+
+

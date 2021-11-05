@@ -16,6 +16,12 @@ canLoad:[AuthGuard],
 canActivate:[AuthGuard]
 },
 {
+  path:'peliculas',
+  loadChildren:() => import('./peliculas/peliculas.module').then( m => m.PeliculasModule),
+  canLoad:[AuthGuard],
+  canActivate:[AuthGuard]
+  },
+{
   path:'404',
   component: ErrorPageComponent
 },
