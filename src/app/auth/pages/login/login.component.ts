@@ -20,15 +20,15 @@ this.authService.login()
 console.log(resp);
 
 if ( resp.id ) {
-this.router.navigate(['./juegos','./peliculas']);
-
+this.router.navigate(['./juegos']);
 }
 })
 }
 
+
 ingresarSinLogin() {
 this.authService.logout();
-this.router.navigate(['./juegos','./peliculas']);
+this.router.navigate(['./juegos']);
 
 }
 

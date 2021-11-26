@@ -21,6 +21,11 @@ canActivate:[AuthGuard]
   canLoad:[AuthGuard],
   canActivate:[AuthGuard]
   },
+  {
+    path:'mapas',
+    loadChildren: () =>import('./mapas/mapas.module')
+   .then( m=>m.MapasModule) 
+  },
 {
   path:'404',
   component: ErrorPageComponent
@@ -31,7 +36,6 @@ canActivate:[AuthGuard]
 }
 
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

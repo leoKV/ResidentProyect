@@ -7,6 +7,8 @@ import { JuegoComponent } from './pages/juego/juego.component';
 import { ListadoComponent } from './pages/listado/listado.component';
 import { HomeComponent } from './pages/home/home.component';
 
+
+
 const rutas: Routes=[
   {
     path: '',
@@ -20,7 +22,9 @@ const rutas: Routes=[
       { path: '**', redirectTo: 'listado' }
     ]
   }
+  
 ]
+
 
 @NgModule({
   imports: [
