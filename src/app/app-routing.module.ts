@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { ErrorPageComponent } from './shared/error-page/error-page.component';
 import { AuthGuard } from './auth/guards/auth.guard';
+import { JuegoComponent } from './juegos/pages/juego/juego.component';
+import { JuegosModule } from './juegos/juegos.module';
 
 const routes: Routes = [
 {
@@ -27,12 +29,12 @@ canActivate:[AuthGuard]
    .then( m=>m.MapasModule) 
   },
 {
-  path:'404',
-  component: ErrorPageComponent
+  path:'juegos',
+  component: JuegoComponent
 },
 {
   path:'**',
-  redirectTo:'404'
+  redirectTo:'juegos'
 }
 
 ];

@@ -23,7 +23,7 @@ export class FullScreanComponent implements OnInit {
     var map = new mapboxgl.Map({
     container:'mapa',
     style:'mapbox://styles/mapbox/streets-v11',
-    center:[-100.87453064961822,21.46533511524833],
+    center:[139.67450102421353,35.805849464827475],
     zoom:20
     });
   }
