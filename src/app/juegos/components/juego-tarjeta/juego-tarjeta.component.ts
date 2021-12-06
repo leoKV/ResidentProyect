@@ -8,6 +8,10 @@ import { Juego } from '../../interfaces/juegos-interfaces';
   mat-card {
     margin-top: 20px
   }
+  mat-card-title{
+      font-size: 25px;
+      color: #FF120E;
+  }
 `]
 })
 export class JuegoTarjetaComponent  {

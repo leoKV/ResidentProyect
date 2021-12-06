@@ -10,6 +10,11 @@ import { Auth } from 'src/app/auth/interfaces/auth';
   .container {
     margin: 10px;
   }
+  h1{
+    font-family: 'Resident Evil', arial;
+    font-size: 40px;
+    color: #42FA36;
+  }
 `]
 })
 export class HomePComponent implements OnInit {
