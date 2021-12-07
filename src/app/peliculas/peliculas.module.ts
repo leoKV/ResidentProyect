@@ -13,6 +13,9 @@ import { MaterialModule } from '../material/material.module';
 import { FormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { PeliculasRoutingModule } from './peliculas-routing.module';
+import { RedesComponent } from './redes/redes.component';
+
+
 
 
 
@@ -26,7 +29,8 @@ import { PeliculasRoutingModule } from './peliculas-routing.module';
     BuscarPComponent,
     HomePComponent,
     PeliculaComponent,
-    ListadoPComponent
+    ListadoPComponent,
+    RedesComponent,
   ],
   imports: [
     CommonModule,

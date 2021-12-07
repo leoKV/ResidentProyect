@@ -1,0 +1,57 @@
+img{
+    width: 40%;
+    height: 20%;
+    border-radius: 20px;
+}
+mat-card{
+    margin-top: 25px;
+}
+h1{
+    font-family: 'Resident Evil', arial;
+    font-size: 30px;
+    color: #19C0CB;
+}
+.fb{
+    font-family: facebook;
+    font-size: 30px;
+    color: #2B7BD5;
+}
+.in{
+    font-family:Cambria;
+    font-size: 30px;
+    color: #F10ADF;
+}
+.tw{
+font-family:Calibri;
+font-size: 30px;
+color:  #0AEEF1;
+}
+mat-card-subtitle{
+    padding-top: 5px;
+}
+a{
+    font-family: Helvetica;
+    font-size: 15px;
+    color: azure;
+}
+mat-icon{
+    margin-left: 10px;
+}
+#btnFace{
+    background: #2c3e50;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #3498db, #2c3e50);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #3498db, #2c3e50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+#btnIns{
+    background: #833ab4;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+#btnTw{
+    background: #43cea2;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #185a9d, #43cea2);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #185a9d, #43cea2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
