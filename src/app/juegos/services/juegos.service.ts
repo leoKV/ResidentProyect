@@ -10,7 +10,7 @@ import { environment } from 'src/environments/environment';
 })
 export class JuegosService {
 
-  private baseUrl: string = environment.baseUrl;
+  private baseUrl: string= environment.baseUrl;
   constructor( private http:HttpClient) { }
 
   getJuegos(): Observable<Juego[]> {
@@ -37,5 +37,6 @@ export class JuegosService {
     return this.http.delete<any>(`${ this.baseUrl }/juegos/${ id }`);
   }
 
+  
 }
 
